@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html>
 <body>
-<button onclick="myFunction()">Click me</button>
+<button style="height:200px;width:200px" onclick="myFunction()">Click me</button>
+<p id="demo"></p>
 <script>
+      window.addEventListener("message", (event) => {
+        document.getElementById("demo").innerHTML = "Clicked from app";
+      }, false);
       function myFunction() {
-        Print.postMessage('Hello')
+        Print.postMessage('Hello');
       }
+
 </script>
 </body>
 </html>
